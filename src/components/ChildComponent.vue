@@ -3,9 +3,11 @@
 
 <template>
   <div class="child">
+    <slot name="top"></slot>
+
     <h2>Este es un componente hijo</h2>
 
-    <slot></slot>
+    <slot name="bottom"></slot>
   </div>
 </template>
 
