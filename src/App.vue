@@ -7,7 +7,9 @@ import ChildComponent from "./components/ChildComponent.vue";
 
   <h2>Este es el componente padre</h2>
 
-  <ChildComponent></ChildComponent>
+  <ChildComponent>
+    <h3>Contenido desde el componente padre como slot</h3>
+  </ChildComponent>
 </template>
 
 <style></style>

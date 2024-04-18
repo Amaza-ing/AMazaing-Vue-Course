@@ -4,6 +4,8 @@
 <template>
   <div class="child">
     <h2>Este es un componente hijo</h2>
+
+    <slot></slot>
   </div>
 </template>
 
