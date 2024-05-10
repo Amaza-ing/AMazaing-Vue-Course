@@ -1,20 +1,18 @@
 <script setup>
-import { ref } from "vue";
-import ChildComponent from "./components/ChildComponent.vue";
+import { computed, ref } from "vue";
 
-const displayName = ref("");
-
-const setName = (e) => {
-  displayName.value = e;
-}
+const userName = ref("María");
+const nameLength = computed(() => {
+  return userName.value.length;
+})
 </script>
 
 <template>
-  <h1>Component events | Comunicación hijo-padre ↑</h1>
+  <h1>Computed | Propiedades computadas</h1>
 
-  <h2>Hola {{ displayName }}</h2>
-
-  <ChildComponent @login="setName"></ChildComponent>
+  <input type="text" v-model="userName">
+  <h2>Hola {{ userName }}</h2>
+  <h3>Tu nombre tiene {{ nameLength }} letras</h3>
 </template>
 
 <style></style>
