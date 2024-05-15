@@ -1,20 +1,30 @@
 <script setup>
-import { ref } from "vue";
-import ChildComponent from "./components/ChildComponent.vue";
+import { ref, watch } from "vue";
 
-const displayName = ref("");
+const userName = ref({ name: "Adrián" });
 
-const setName = (e) => {
-  displayName.value = e;
-}
+const setName = () => {
+  userName.value.name = "María";
+};
+
+watch(
+  userName,
+  (newValue, oldValue) => {
+    console.log("User Name modified", newValue, oldValue);
+  },
+  {
+    immediate: true,
+    deep: true
+  }
+);
 </script>
 
 <template>
-  <h1>Component events | Comunicación hijo-padre ↑</h1>
+  <h1>Watch | Vigilancia de cambios</h1>
 
-  <h2>Hola {{ displayName }}</h2>
+  <h2>Hola {{ userName.name }}</h2>
 
-  <ChildComponent @login="setName"></ChildComponent>
+  <button @click="setName">Cambiar de Usuario</button>
 </template>
 
 <style></style>
