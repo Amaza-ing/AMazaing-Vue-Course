@@ -1,19 +1,15 @@
 <script setup>
-let myCondition = true;
+const condition = "";
+const condition2 = false;
 </script>
 
 <template>
-  <!-- <h1 :class="myCondition ? 'highlight' : ''">Hola a todos</h1> -->
-  <h1 :class="{ highlight: myCondition, red: true }">Hola a todos</h1>
+  <h1>Directiva v-if</h1>
+
+  <h2 v-if="condition">La condición se cumple</h2>
+  <h2 v-else-if="condition2">Condición 2</h2>
+  <h2 v-else>No se cumplen las condiciones</h2>
 </template>
 
 <style>
-.highlight {
-  background-color: black;
-  color: yellow;
-}
-
-.red {
-  color: red;
-}
 </style>
