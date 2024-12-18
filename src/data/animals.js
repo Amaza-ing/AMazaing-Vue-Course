@@ -1,6 +1,3 @@
-<script setup>
-const movies = ["Lord of the Rings", "Star Wars", "Dune"];
-
 const animals = [
   {
     id: 1,
@@ -18,23 +15,3 @@ const animals = [
     img: "https://media.cnn.com/api/v1/images/stellar/prod/190414090035-01-cassowary.jpg",
   },
 ];
-</script>
-
-<template>
-  <h1>Renderizado de listas | v-for</h1>
-
-  <div>
-    <p v-for="(movie, index) in movies" :key="movie">
-      {{ index + 1 }} - {{ movie }}
-    </p>
-  </div>
-
-  <ul>
-    <li v-for="animal in animals" :key="animal.id">
-      {{ animal.name }}
-      <img :src="animal.img" alt="" width="200" />
-    </li>
-  </ul>
-</template>
-
-<style></style>
