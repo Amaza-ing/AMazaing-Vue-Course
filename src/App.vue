@@ -1,16 +1,19 @@
 <script setup>
-import { ref } from "vue";
-
-const myId = "patata";
-
-const myValue = ref("Some value");
+let myCondition = true;
 </script>
 
 <template>
-  <h1 :id="myId">Hola a todos!</h1>
-
-  <h2>{{ myValue }}</h2>
-  <input type="text" v-model="myValue" />
+  <!-- <h1 :class="myCondition ? 'highlight' : ''">Hola a todos</h1> -->
+  <h1 :class="{ highlight: myCondition, red: true }">Hola a todos</h1>
 </template>
 
-<style></style>
+<style>
+.highlight {
+  background-color: black;
+  color: yellow;
+}
+
+.red {
+  color: red;
+}
+</style>
