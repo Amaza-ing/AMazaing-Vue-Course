@@ -10,7 +10,7 @@ const myValue = ref("Some value");
   <h1 :id="myId">Hola a todos!</h1>
 
   <h2>{{ myValue }}</h2>
-  <input type="text" :value="myValue" />
+  <input type="text" v-model="myValue" />
 </template>
 
 <style></style>
