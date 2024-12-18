@@ -1,20 +1,15 @@
 <script setup>
-import { ref } from "vue";
-import ChildComponent from "./components/ChildComponent.vue";
-
-const displayName = ref("");
-
-const setName = (e) => {
-  displayName.value = e;
-}
+import NavBar from "./components/NavBar.vue";
 </script>
 
 <template>
-  <h1>Component events | Comunicación hijo-padre ↑</h1>
-
-  <h2>Hola {{ displayName }}</h2>
-
-  <ChildComponent @login="setName"></ChildComponent>
+  <h1 class="title">Hola a todos!</h1>
+  <NavBar></NavBar>
 </template>
 
-<style></style>
+<style>
+.title {
+  background-color: blue;
+  color: white;
+}
+</style>
