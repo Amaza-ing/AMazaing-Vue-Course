@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+import HeaderComponent from "../components/HeaderComponent.vue";
 
 const movies = ref([
   { title: "Inception", duration: "148 min", director: "Christopher Nolan" },
@@ -13,8 +14,9 @@ const movies = ref([
 </script>
 
 <template>
+  <HeaderComponent />
+
   <div>
-    <h1>Movies</h1>
     <ul>
       <li v-for="movie in movies" :key="movie.title" class="movie">
         <h2>{{ movie.title }}</h2>
