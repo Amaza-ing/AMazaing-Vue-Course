@@ -1,4 +1,4 @@
-<!-- npm install vue-router -->
+<!-- npm install pinia -->
 
 <script setup>
 import { RouterView } from 'vue-router';
