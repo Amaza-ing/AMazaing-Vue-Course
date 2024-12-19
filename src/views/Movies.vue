@@ -16,7 +16,7 @@ const movies = ref([
 <template>
   <HeaderComponent />
 
-  <div>
+  <div class="movies">
     <ul>
       <li v-for="movie in movies" :key="movie.title" class="movie">
         <h2>{{ movie.title }}</h2>
@@ -28,10 +28,15 @@ const movies = ref([
 </template>
 
 <style>
-.movie {
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.movies {
+  margin: 20px auto;
+  width: 500px;
+
+  .movie {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
 }
 </style>

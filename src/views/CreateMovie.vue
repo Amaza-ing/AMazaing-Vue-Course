@@ -37,6 +37,9 @@ const handleSubmit = () => {
 
 <style>
 .form {
+  margin: 20px auto;
+  width: 500px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   gap: 1rem;
