@@ -1,16 +1,8 @@
 <script setup>
-import { ref } from "vue";
 import HeaderComponent from "../components/HeaderComponent.vue";
+import { useMovieStore } from "../stores/movie";
 
-const movies = ref([
-  { title: "Inception", duration: "148 min", director: "Christopher Nolan" },
-  {
-    title: "The Lord of the Rings",
-    duration: "201 min",
-    director: "Peter Jackson",
-  },
-  { title: "Interstellar", duration: "169 min", director: "Christopher Nolan" },
-]);
+const movieStore = useMovieStore();
 </script>
 
 <template>
@@ -18,7 +10,7 @@ const movies = ref([
 
   <div class="movies">
     <ul>
-      <li v-for="movie in movies" :key="movie.title" class="movie">
+      <li v-for="movie in movieStore.movies" :key="movie.title" class="movie">
         <h2>{{ movie.title }}</h2>
         <p>Duration: {{ movie.duration }}</p>
         <p>Director: {{ movie.director }}</p>

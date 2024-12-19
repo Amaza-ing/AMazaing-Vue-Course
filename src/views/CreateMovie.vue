@@ -1,6 +1,9 @@
 <script setup>
 import { reactive } from "vue";
 import HeaderComponent from "../components/HeaderComponent.vue";
+import { useMovieStore } from "../stores/movie";
+
+const movieStore = useMovieStore();
 
 const movie = reactive({
   title: "",
@@ -13,8 +16,8 @@ const handleSubmit = () => {
     alert("Rellena todos los campos, por favor");
     return;
   }
-  
-  console.log(movie);
+
+  movieStore.addMovie(movie);
 };
 </script>
 
