@@ -24,7 +24,7 @@ export const useMovieStore = defineStore(
       },
     ]);
 
-    const addMovie = (movie) => movies.value.push(movie);
+    const addMovie = (movie) => movies.value.push({ ...movie });
 
     return {
       movies,

@@ -18,6 +18,10 @@ const handleSubmit = () => {
   }
 
   movieStore.addMovie(movie);
+
+  movie.title = "";
+  movie.duration = 0;
+  movie.director = "";
 };
 </script>
 
