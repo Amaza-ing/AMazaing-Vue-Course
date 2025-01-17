@@ -1,3 +1,5 @@
+// npm install pinia-plugin-persistedstate
+
 import { defineStore } from "pinia";
 import { ref } from "vue";
 
@@ -22,4 +24,6 @@ export const useMovieStore = defineStore("movie", () => {
     movies,
     addMovie,
   };
+}, {
+  persist: true,
 });
