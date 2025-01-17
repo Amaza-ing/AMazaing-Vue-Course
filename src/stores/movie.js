@@ -1,5 +1,3 @@
-// npm install pinia-plugin-persistedstate
-
 import { defineStore } from "pinia";
 import { ref } from "vue";
 

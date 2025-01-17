@@ -1,7 +1,10 @@
+<!-- https://router.vuejs.org/guide/essentials/navigation.html -->
+
 <script setup>
 import { reactive } from "vue";
 import HeaderComponent from "../components/HeaderComponent.vue";
 import { useMovieStore } from "../stores/movie";
+import router from "../router";
 
 const movieStore = useMovieStore();
 
@@ -22,6 +25,8 @@ const handleSubmit = () => {
   movie.title = "";
   movie.duration = 0;
   movie.director = "";
+
+  router.push({ name: "movies" });
 };
 </script>
 
