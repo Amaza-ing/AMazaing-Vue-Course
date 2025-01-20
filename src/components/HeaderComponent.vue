@@ -1,8 +1,17 @@
-<script setup></script>
+<script setup>
+import { useUserStore } from '../stores/user';
+
+const userStore = useUserStore();
+</script>
 
 <template>
   <header class="header">
     <h1>Movies</h1>
+
+    <div class="login-bar">
+      <p v-if="userStore.user" class="username">{{ userStore.user.name }}</p>
+      <button @click="userStore.getUser()">Login</button>
+    </div>
 
     <nav>
       <ul class="nav-list">
@@ -26,6 +35,20 @@
   color: white;
   text-align: center;
   padding: 20px;
+
+  .login-bar {
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: end;
+
+    .username {
+      margin: 0;
+      padding-right: 10px;
+    }
+  }
 
   .nav-list {
     display: flex;
