@@ -24,9 +24,14 @@ export const useMovieStore = defineStore(
 
     const addMovie = (movie) => movies.value.push({ ...movie });
 
+    const getMovie = (movieTitle) => {
+      return movies.value.find((movie) => movie.title === movieTitle);
+    };
+
     return {
       movies,
       addMovie,
+      getMovie,
     };
   },
   {
