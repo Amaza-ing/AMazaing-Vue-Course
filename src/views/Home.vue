@@ -8,11 +8,14 @@ const counter = ref(1);
 </script>
 
 <template>
-  <!-- <HeaderComponent /> -->
+  <HeaderComponent />
 
   <h1>Welcome to the Home Page</h1>
 
-  <h2 id="counter">Counter: {{ counter }} <button @click="counter++">+</button></h2>
+  <h2 id="counter">
+    Counter: {{ counter }}
+    <button @click="counter++" id="counter-btn">+</button>
+  </h2>
 </template>
 
 <style></style>
