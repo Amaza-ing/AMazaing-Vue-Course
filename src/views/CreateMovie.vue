@@ -1,7 +1,7 @@
-<!-- https://router.vuejs.org/guide/essentials/navigation.html -->
+<!-- https://vuejs.org/api/composition-api-lifecycle -->
 
 <script setup>
-import { reactive } from "vue";
+import { onUpdated, reactive } from "vue";
 import HeaderComponent from "../components/HeaderComponent.vue";
 import { useMovieStore } from "../stores/movie";
 import router from "../router";
@@ -28,6 +28,10 @@ const handleSubmit = () => {
 
   router.push({ name: "movies" });
 };
+
+onUpdated(() => {
+  console.log("Create Movie Component Updated");
+})
 </script>
 
 <template>

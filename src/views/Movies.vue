@@ -1,8 +1,17 @@
 <script setup>
+import { onMounted, onUnmounted } from "vue";
 import HeaderComponent from "../components/HeaderComponent.vue";
 import { useMovieStore } from "../stores/movie";
 
 const movieStore = useMovieStore();
+
+onMounted(() => {
+  console.log("Movie Component Mounted");  
+})
+
+onUnmounted(() => {
+  console.log("Movie Component Unmounted");
+})
 </script>
 
 <template>
