@@ -1,9 +1,19 @@
 <h1>Bienvenidos al curso de Vue.js de AMazaing</h1>
 
-<h3><a href="https://www.youtube.com/playlist?list=PLzA2VyZwsq_9cD3JIxBymaIVyef07PJ-y">Ver este curso en YouTube</a></h3>
+<h3><a href="https://www.youtube.com/playlist?list=PLzA2VyZwsq_92Fnb4JEUnXUhSYfNHtcKx">Ver este curso en YouTube</a></h3>
+
+---
+
+## 🐱‍👤 **Curso con Temas y Ejemplos**
+
+También puedes seguir el curso accediendo a [este repositorio con los temas y ejemplos de cada sección](https://github.com/Amaza-ing/Cursos-Programacion-Temas-y-Ejercicios) para una lectura ordenada paso a paso.
+
+También podrás encontrar otros cursos completos y desarrollados completamente gratuitos.
+
+---
 
 <h3>
-  Este curso está separado por ramas, tienes cada lección y ejemplo en cada rama.
+  Este repositorio está separado por ramas. Tienes cada lección y ejemplo en cada rama.
 </h3>
 <h4>
   Puedes ver cada rama en <a href="https://github.com/Amaza-ing/AMazaing-Vue-Course">este repositorio de GitHub</a>.
